@@ -100,7 +100,7 @@ vioplot(gradedata[, qcol7], col = c("gold", "red", "blue"), xlab = "Points", hor
 ```{r q8}
 qcol8 <- c('P8', 'C8', 'T8')
 
-vioplot(gradedata[, qcol], col = c("gold", "red", "blue"), xlab = "Points", horizontal = TRUE)
+vioplot(gradedata[, qcol8], col = c("gold", "red", "blue"), xlab = "Points", horizontal = TRUE)
 ```
 
 ## Question 9
