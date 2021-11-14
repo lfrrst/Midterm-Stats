@@ -1,0 +1,112 @@
+---
+title: "MidtermStats"
+author: "Lucas Forrest"
+date: "11/10/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Library Packages
+
+```{r library}
+library(readxl)
+library(vioplot)
+library(tidyverse)
+```
+
+## Import Data
+
+```{r import}
+
+gradedata <- read_excel("C:/Users/Lucas/OneDrive - Forrest/Work/UWT Lecturer/AU21 TBUS 301C/AU21 Midterm Grades.xlsx", sheet = "Grades")
+
+surveydata <- read_excel("C:/Users/Lucas/OneDrive - Forrest/Work/UWT Lecturer/AU21 TBUS 301C/AU21 Midterm Grades.xlsx", 
+    sheet = "Survey")
+```
+
+## Survey
+
+```{r}
+summary(surveydata$Hours)
+
+vioplot(surveydata$Hours, col = "gold", xlab = "Hours", horizontal = TRUE, main = "Time to Finish Midterm")
+
+barplot(table(surveydata$EasiestQ), main = "Easiest Question")
+
+barplot(table(surveydata$HardestQ), main = "Hardest Question")
+```
+
+## Question 1
+
+```{r q1}
+qcol1 <- c('P1', 'C1', 'T1')
+
+vioplot(gradedata[, qcol1], col = c("gold", "red", "blue"), xlab = "Points", horizontal = TRUE)
+```
+
+## Question 2
+
+```{r q2}
+qcol2 <- c('P2', 'C2', 'T2')
+
+vioplot(gradedata[, qcol2], col = c("gold", "red", "blue"), xlab = "Points", horizontal = TRUE)
+```
+
+## Question 3
+
+```{r q3}
+qcol3 <- c('P3', 'C3', 'T3')
+
+vioplot(gradedata[, qcol3], col = c("gold", "red", "blue"), xlab = "Points", horizontal = TRUE)
+```
+
+## Question 4
+
+```{r q4}
+qcol4 <- c('P4', 'C4', 'T4')
+
+vioplot(gradedata[, qcol4], col = c("gold", "red", "blue"), xlab = "Points", horizontal = TRUE)
+```
+
+## Question 5
+
+```{r q5}
+qcol5 <- c('P5', 'C5', 'T5')
+
+vioplot(gradedata[, qcol5], col = c("gold", "red", "blue"), xlab = "Points", horizontal = TRUE)
+```
+
+## Question 6
+
+```{r q6}
+qcol6 <- c('P6', 'C6', 'T6')
+
+vioplot(gradedata[, qcol6], col = c("gold", "red", "blue"), xlab = "Points", horizontal = TRUE)
+```
+
+## Question 7
+
+```{r q7}
+qcol7 <- c('P7', 'C7', 'T7')
+
+vioplot(gradedata[, qcol7], col = c("gold", "red", "blue"), xlab = "Points", horizontal = TRUE)
+```
+
+## Question 8
+
+```{r q8}
+qcol8 <- c('P8', 'C8', 'T8')
+
+vioplot(gradedata[, qcol], col = c("gold", "red", "blue"), xlab = "Points", horizontal = TRUE)
+```
+
+## Question 9
+
+```{r q9}
+qcol9 <- c('P9', 'C9', 'T9')
+
+vioplot(gradedata[, qcol9], col = c("gold", "red", "blue"), xlab = "Points", horizontal = TRUE)
+```
