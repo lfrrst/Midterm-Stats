@@ -2,7 +2,8 @@
 title: "MidtermStats"
 author: "Lucas Forrest"
 date: "11/10/2021"
-output: html_document
+output:
+  word_document: default
 ---
 
 ```{r setup, include=FALSE}
