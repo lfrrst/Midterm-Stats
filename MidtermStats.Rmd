@@ -145,9 +145,9 @@ gradedata$TFP <- ((gradedata$FPS / appoints) * 0.70 + (gradedata$FCS / acpoints)
 
 ```{r Scores}
 
-boxplot(gradedata[, c("TRS", "TAS", "FTS")], col = c("skyblue3", "coral1", "darkgoldenrod1"), xlab = "Percent", horizontal = TRUE)
+vioplot(gradedata[, c("TRS", "TAS", "FTS")], col = c("skyblue3", "coral1", "darkgoldenrod1"), xlab = "Percent", horizontal = TRUE)
 
-boxplot(gradedata[, c("TRP", "TAP", "TFP")], col = c("skyblue3", "coral1", "darkgoldenrod1"), xlab = "Percent", horizontal = TRUE)
+vioplot(gradedata[, c("TRP", "TAP", "TFP")], col = c("skyblue3", "coral1", "darkgoldenrod1"), xlab = "Percent", horizontal = TRUE)
 
 ```
 
@@ -156,5 +156,14 @@ boxplot(gradedata[, c("TRP", "TAP", "TFP")], col = c("skyblue3", "coral1", "dark
 ```{r}
 
 summary(gradedata$TFP)
+
+```
+
+## Output
+
+```{r output}
+
+output <- data.frame(gradedata$Student, gradedata$FTS, gradedata$TFP)
+View(output)
 
 ```
