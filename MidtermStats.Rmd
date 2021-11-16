@@ -33,7 +33,7 @@ surveydata <- read_excel("C:/Users/Lucas/OneDrive - Forrest/Work/UWT Lecturer/AU
 ```{r}
 summary(surveydata$Hours)
 
-vioplot(surveydata$Hours, col = "darkgoldenrod1", xlab = "Hours", horizontal = TRUE, main = "Time to Finish Midterm")
+boxplot(surveydata$Hours, col = "darkgoldenrod1", xlab = "Hours", horizontal = TRUE, main = "Time to Finish Midterm")
 
 barplot(table(surveydata$EasiestQ), main = "Easiest Question")
 
@@ -146,7 +146,7 @@ gradedata$TFP <- ((gradedata$FPS / appoints) * 0.70 + (gradedata$FCS / acpoints)
 
 ```{r Scores}
 
-vioplot(gradedata[, c("TRS", "TAS", "FTS")], col = c("skyblue3", "coral1", "darkgoldenrod1"), xlab = "Percent", horizontal = TRUE)
+vioplot(gradedata[, c("TRS", "TAS", "FTS")], col = c("skyblue3", "coral1", "darkgoldenrod1"), xlab = "Points", horizontal = TRUE)
 
 vioplot(gradedata[, c("TRP", "TAP", "TFP")], col = c("skyblue3", "coral1", "darkgoldenrod1"), xlab = "Percent", horizontal = TRUE)
 
